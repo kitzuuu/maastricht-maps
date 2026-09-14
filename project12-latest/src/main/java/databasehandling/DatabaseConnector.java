@@ -13,8 +13,8 @@ public class DatabaseConnector {
 // If so, don't do that
 
     private static final String localHost = "jdbc:mysql://localhost:3306/gtfs";
-    private static final String username = "root";
-    private static final String password = "WalramD1!";
+    private static final String username = System.getenv().getOrDefault("DB_USER", "root");
+    private static final String password = System.getenv().getOrDefault("DB_PASSWORD", "");
 
     public static Connection getConnection() throws SQLException {
         try {
