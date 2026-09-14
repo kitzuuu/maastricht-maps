@@ -12,7 +12,7 @@ import java.util.Arrays;
  */
 public class ApiGraphHopperFoot {
     // The API key for the GraphHopper API
-    private static final String KEY = "bf3e0c54-ef50-4c66-9e2c-ab0e70ad4868";
+    private static final String KEY = System.getenv("GRAPHHOPPER_API_KEY");
 
     /**
      * Makes a GET request to the GraphHopper API to get the walking route between
